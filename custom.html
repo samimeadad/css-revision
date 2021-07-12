@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Custom Property</title>
+    <style>
+        /* customer property (variable) declaration */
+        :root {
+            --main-color: orange;
+            --dark-border: 2px solid black;
+            --border-color: gray;
+            --side-width: 200px;
+            --main-bg-color: lightgray;
+        }
+
+        h1 {
+            color: var(--main-color);
+            /*variable use*/
+        }
+
+        p {
+            color: slateblue;
+        }
+
+        h2 {
+            color: slateblue;
+            border: var(--dark-border);
+        }
+
+        h6 {
+            background-color: var(--main-bg-color);
+        }
+
+        footer {
+            clear: both;
+            border: var(--dark-border);
+        }
+
+        .side-nav,
+        .blog-container {
+            float: left;
+            height: 500px;
+        }
+
+        .side-nav {
+            background-color: tomato;
+            width: var(--side-width);
+        }
+
+        .blog-container {
+            background-color: wheat;
+            width: calc(100% - var(--side-width));
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>I am exploring CSS Custom Property (Variable)</h1>
+        <p>Welcom to my website</p>
+    </header>
+    <main>
+        <h2>My Awesome Contents</h2>
+        <h6>my tyny heading</h6>
+        <section>
+            <aside class="side-nav">
+                my side navigation bar
+            </aside>
+            <div class="blog-container">
+                <h4>Blogs</h4>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><small>copyright sami meadad choudhury</small></p>
+    </footer>
+</body>
+
+</html>
